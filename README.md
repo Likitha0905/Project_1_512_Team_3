@@ -15,13 +15,13 @@ The system consists of the following microservices:
     * Uses Dapr's Pub/Sub to publish an "order created" event.
 
 3.  **`inventory-service` (Python):**
-    * A service that (optionally) subscribes to the "order created" event.
+    * A service that subscribes to the "order created" event.
     * Simulates updating inventory levels upon receiving a new order (currently logs the event).
 
 ## Dapr Building Blocks Demonstrated
 
 * **Service Invocation:** The `frontend-service` calls the `order-processor` to handle order creation.
-* **State Management:** The `order-processor` persists order information using an in-memory state store (configured via Dapr).
+* **State Management:** The `order-processor` persists order information using an in-memory state store.
 * **Pub/Sub:** The `order-processor` publishes an "order-created" event, which the `inventory-service` subscribes to.
 
 
