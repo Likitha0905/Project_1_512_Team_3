@@ -1,0 +1,11 @@
+apiVersion: dapr.io/v1alpha1
+kind: Configuration
+metadata:
+  name: order-processor-config
+spec:
+  
+  #   samplingRate: "0.5"
+  #   # ... (tracing backend configuration)
+  # metrics:
+  #   enabled: true
+  #   port: 9090

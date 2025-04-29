@@ -1,0 +1,11 @@
+apiVersion: dapr.io/v1alpha1
+kind: Configuration
+metadata:
+  name: frontend-config
+spec:
+  tracing:
+    samplingRate: "0.5"
+   
+  metrics:
+    enabled: true
+    port: 9090
